@@ -7,7 +7,7 @@ import retrofit2.http.GET;
 
 public interface ProductApi {
 
-    //@GET("api/product/products")
-    //public Single<List<ProductModel>> getProdcuts()
+    @GET("/api/product/products")
+    public Single<List<ProductModel>> getProdcuts();
 
 }

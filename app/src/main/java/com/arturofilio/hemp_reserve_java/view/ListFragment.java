@@ -90,5 +90,13 @@ public class ListFragment extends Fragment {
             productList.setLayoutManager(new GridLayoutManager(getContext(), 2));
             productList.setAdapter(listAdapter);
         }
+
+        refreshLayout.setOnRefreshListener(() -> {
+            productList.setVisibility(View.GONE);
+            listError.setVisibility(View.GONE);
+            loadingView.setVisibility(View.VISIBLE);
+            viewModel.refresh();
+            refreshLayout.setRefreshing(false);
+        });
     }
 }
