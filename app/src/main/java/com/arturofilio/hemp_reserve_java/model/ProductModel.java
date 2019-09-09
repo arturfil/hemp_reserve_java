@@ -6,9 +6,16 @@ import java.util.Date;
 
 public class ProductModel {
 
+    @SerializedName("name")
     public String name;
+
+    @SerializedName("description")
     public String description;
+
+    @SerializedName("price")
     public int price;
+
+    @SerializedName("category")
     public String category;
 
     public ProductModel(String name) {

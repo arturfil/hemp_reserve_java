@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ProductApiService {
 
-    private static final String BASE_URL = "https://thehempreserve.com";
+    private static final String BASE_URL = "http://thehempreserve.com";
     ProductApi api = new Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
