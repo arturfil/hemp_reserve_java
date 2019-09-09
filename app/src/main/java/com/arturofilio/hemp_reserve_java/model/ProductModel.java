@@ -16,10 +16,14 @@ public class ProductModel {
     public int price;
 
     @SerializedName("category")
-    public String category;
+    public Category category;
 
     public ProductModel(String name) {
         this.name = name;
     }
 
+}
+
+class Category {
+    public String name;
 }
